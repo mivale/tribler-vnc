@@ -1,2 +1,3 @@
 tribler/
 *.xz
+.envrc
