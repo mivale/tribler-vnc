@@ -24,7 +24,7 @@ fetch: ## Fetch the defined version
 	make patch
 
 patch: ## Apply our patches on the source
-	cd tribler && patch -p0 < ../patch/tribler_window.py.diff
+	cd tribler && patch -p1 < ../patch/tribler_window.py.diff
 
 build: ## Build image
 	test -d tribler || make fetch
