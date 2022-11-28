@@ -3,6 +3,7 @@ version: "3.3"
 services:
   tribler-vnc:
     image: mivale/tribler-vnc:latest
+    restart: unless-stopped
     # build: please use make build
     volumes:
       - ./settings:/home/user/.Tribler
