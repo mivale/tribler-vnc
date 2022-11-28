@@ -1,0 +1,12 @@
+diff --git a/src/tribler/gui/tribler_window.py b/src/tribler/gui/tribler_window.py
+index 0e6b84730..3c53e1c49 100644
+--- a/src/tribler/gui/tribler_window.py
++++ b/src/tribler/gui/tribler_window.py
+@@ -177,6 +177,7 @@ class TriblerWindow(QMainWindow):
+         api_port = api_port or default_network_utils.get_first_free_port(
+             start=int(get_gui_setting(self.gui_settings, "api_port", DEFAULT_API_PORT))
+         )
++        api_port = int(api_port)
+         if not default_network_utils.is_port_free(api_port):
+             raise RuntimeError(
+                 "Tribler configuration conflicts with the current OS state: "

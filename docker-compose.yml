@@ -1,0 +1,15 @@
+version: "3.3"
+
+services:
+  tribler-vnc:
+    image: mivale/tribler-vnc:latest
+    # build: please use make build
+    volumes:
+      - ./settings:/home/user/.Tribler
+      - ./downloads:/home/user/TriblerDownloads
+      - ./logs:/home/user/logs
+    ports:
+      - 20100:20100
+      - 5900:5900
+    environment:
+      CORE_API_PORT: 20100

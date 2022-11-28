@@ -1,0 +1,5 @@
+*
+!tribler/requirements-core.txt
+!tribler/requirements.txt
+!tribler/src
+!start-x11.sh
